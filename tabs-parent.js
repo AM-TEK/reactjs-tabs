@@ -1,21 +1,20 @@
 "use client"
 
 import Tabs from "./tabs"
-import "./styles.css"
 
 function RandomComponent() {
-  return <h1>Some random content</h1>;
+  return <h1>Random content for Tab 3</h1>;
 }
 
-export default function Test() {
+export default function TabsParent() {
   const tabs = [
     {
       label: 'Tab 1',
-      content: <div>This is content for Tab 1</div>
+      content: <div>Content for Tab 1</div>
     },
     {
       label: 'Tab 2',
-      content: <div>This is content for Tab 2</div>
+      content: <div>Content for Tab 2</div>
     },
     {
       label: 'Tab 3',

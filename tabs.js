@@ -12,13 +12,13 @@ export default function Tabs({tabsContent, onChange}) {
 
   return (
     <div className="wrapper">
-      <div className="heading">
+      <div className="flex">
         {
           tabsContent.map((tabItem, index) => (
             <div 
               onClick={() => handleOnClick(index)} 
               key={tabItem.label}
-              className={`tab-item ${currentTabIndex === index ? "active" : ""}`}
+              className={`px-4 py-2 cursor-pointer ${currentTabIndex === index ? "bg-blue-500 text-white" : "bg-gray-200 text-gray-800"} rounded-tl rounded-tr`}
             >
               <span className="label">
                 {tabItem.label}
@@ -27,7 +27,7 @@ export default function Tabs({tabsContent, onChange}) {
           ))
         }
       </div>
-      <div className="text-blue-400 content">
+      <div className="p-4 text-white bg-blue-400">
         {
           tabsContent[currentTabIndex] && tabsContent[currentTabIndex].content
         }
